@@ -28,6 +28,7 @@ dependencies {
     def ver_Dagger = '2.24'
     def ver_Retrofit = '2.3.0'
     def ver_OKHTTP = '3.9.1'
+    def ver_GSON = '2.8.5'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -53,4 +54,7 @@ dependencies {
     // OkHttp
     implementation "com.squareup.okhttp3:logging-interceptor:$ver_OKHTTP"
     implementation "com.squareup.okhttp3:okhttp:$ver_OKHTTP"
+
+    // GSON
+    implementation "com.google.code.gson:gson:$ver_GSON"
 }

@@ -13,7 +13,7 @@ public class RetrofitModule {
     }
 
 //    @Provides
-//    APICall provideApiCall() {
-//        return RetrofitService.createService(APICall.class);
+//    LibAPICall provideApiCall() {
+//        return RetrofitService.createService(LibAPICall.class);
 //    }
 }

@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <application>
-        <activity android:name=".dummyui.NetworkDummyActivity"></activity>
-    </application>
+    <application></application>
 
 </manifest>
