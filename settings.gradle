@@ -1,2 +1,2 @@
-include ':app', ':networkmodule'
+include ':app', ':networkmodule', ':extmodule', ':mfemodule'
 rootProject.name='InjectRetrofit'

@@ -1,4 +1,4 @@
-package com.arpaul.injectretrofit.di;
+package com.arpaul.injectretrofit.di.scopes;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

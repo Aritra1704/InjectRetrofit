@@ -4,9 +4,11 @@ import android.app.Application;
 
 import androidx.annotation.UiThread;
 
+import com.arpaul.extmodule.di.ExtComponent;
 import com.arpaul.injectretrofit.di.component.AppComponent;
 import com.arpaul.injectretrofit.di.component.DaggerAppComponent;
 import com.arpaul.injectretrofit.di.module.PrefModule;
+import com.arpaul.injectretrofit.extImpls.ExtImpl;
 import com.arpaul.networkmodule.di.component.DaggerLibComponent;
 import com.arpaul.networkmodule.di.component.LibComponent;
 
@@ -30,6 +32,7 @@ public class AppInstance extends Application {
                 .libComponent(libComponent)
                 .build();
         component.inject(this);
+//        ExtComponent extComponent = component.getExtComponent(new ExtImpl());
         super.onCreate();
     }
 

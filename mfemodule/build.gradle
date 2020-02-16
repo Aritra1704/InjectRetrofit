@@ -1,29 +1,33 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+
+
     defaultConfig {
-        applicationId "com.arpaul.injectretrofit"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     def ver_Dagger = '2.24'
-    def ver_Retrofit = '2.3.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
@@ -35,14 +39,4 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$ver_Dagger"
     implementation "com.google.dagger:dagger-android-support:$ver_Dagger"
     annotationProcessor "com.google.dagger:dagger-compiler:$ver_Dagger"
-
-    // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:$ver_Retrofit") {
-        exclude module: 'okhttp'
-    }
-    implementation "com.squareup.retrofit2:converter-gson:$ver_Retrofit"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$ver_Retrofit"
-
-    api project(':networkmodule')
-    api project(':extmodule')
 }

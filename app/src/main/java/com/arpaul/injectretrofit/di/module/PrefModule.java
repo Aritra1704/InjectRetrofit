@@ -6,8 +6,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import com.arpaul.injectretrofit.common.AppPref;
-import com.arpaul.injectretrofit.di.AppScope;
-import com.arpaul.networkmodule.network.RetrofitService;
+import com.arpaul.injectretrofit.di.scopes.AppScope;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
