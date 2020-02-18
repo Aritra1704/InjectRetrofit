@@ -2,14 +2,15 @@ package com.arpaul.extmodule.di.modules;
 
 import com.arpaul.extmodule.ExtContract;
 import com.arpaul.extmodule.MFEImpl;
+import com.arpaul.mfemodule.di.MFEComponent;
 
 import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class MFEImplModule {
+public class MFEExtImplModule {
     @Provides
-    ExtContract provideMferImpl() {
+    ExtContract provideMfeExtImpl() {
         return new ExtContractPojo();
     }
 
@@ -19,4 +20,9 @@ public class MFEImplModule {
 
         }
     }
+
+//    @Provides
+//    MFEComponent getMFEComponent() {
+//
+//    }
 }

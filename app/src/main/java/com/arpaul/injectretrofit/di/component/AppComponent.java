@@ -1,7 +1,7 @@
 package com.arpaul.injectretrofit.di.component;
 
 import com.arpaul.extmodule.di.ExtComponent;
-import com.arpaul.extmodule.di.modules.MFEImplModule;
+import com.arpaul.extmodule.di.modules.MFEExtImplModule;
 import com.arpaul.injectretrofit.common.AppInstance;
 import com.arpaul.injectretrofit.common.AppPref;
 import com.arpaul.injectretrofit.di.scopes.AppScope;
@@ -20,6 +20,6 @@ public interface AppComponent {
 
     AppPref getAppPref();
 
-//    ExtComponent getExtComponent(MFEImplModule module);
+    ExtComponent getExtComponent(MFEExtImplModule module);
 
 }

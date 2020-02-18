@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.annotation.UiThread;
 
 import com.arpaul.extmodule.di.ExtComponent;
+import com.arpaul.extmodule.di.modules.MFEExtImplModule;
 import com.arpaul.injectretrofit.di.component.AppComponent;
 import com.arpaul.injectretrofit.di.component.DaggerAppComponent;
 import com.arpaul.injectretrofit.di.module.PrefModule;
@@ -32,7 +33,8 @@ public class AppInstance extends Application {
                 .libComponent(libComponent)
                 .build();
         component.inject(this);
-//        ExtComponent extComponent = component.getExtComponent(new ExtImpl());
+        ExtComponent extComponent = component.getExtComponent(new MFEExtImplModule());
+        
         super.onCreate();
     }
 
